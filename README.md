@@ -1,4 +1,4 @@
-# E-Commerce Public Data Analysis with Python - Dicoding
+# Bike Sharing Data Analysis with Python - Dicoding
 
 ## Overview
 This project dedicated to analysis and visualizing a Bike Sharing Dataset, to see users behaviour and bussiness performance.
