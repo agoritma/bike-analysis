@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 
-def usersBehaviour(df, bywhat):
-    users_behaviour = df.groupby(by=bywhat).cnt.sum().sort_values(ascending=False).reset_index()
-    return users_behaviour
+def usersBehavior(df, bywhat):
+    users_behavior = df.groupby(by=bywhat).cnt.sum().sort_values(ascending=False).reset_index()
+    return users_behavior
 
 df = pd.read_csv("dashboard/main_data.csv")
 df["dteday"] = pd.to_datetime(df["dteday"])
@@ -38,11 +38,11 @@ with env_col3:
     wind = int(df_filtered["windspeed"].mean() * 67)
     st.metric("Average Wind", value=f"{wind} mph")
 
-st.subheader("Users Behaviour")
+st.subheader("Users Behavior")
 tab1, tab2, tab3 = st.tabs(["By Day", "By Weather", "By Season"])
 
 with tab1:
-    user_by_day = usersBehaviour(df_filtered, "weekdaytext")
+    user_by_day = usersBehavior(df_filtered, "weekdaytext")
     colors = ["#B7B7B7"] * len(user_by_day)
     colors[0] = '#379777'
     colors[len(colors)-1] = '#D91656'
@@ -59,7 +59,7 @@ with tab1:
     st.pyplot(fig)
     
 with tab2:
-    user_by_weather = usersBehaviour(df_filtered, "weathertext")
+    user_by_weather = usersBehavior(df_filtered, "weathertext")
     colors = ["#B7B7B7"] * len(user_by_weather)
     colors[0] = '#379777'
     colors[len(colors)-1] = '#D91656'
@@ -79,7 +79,7 @@ with tab2:
     st.pyplot(fig)
     
 with tab3:
-    user_by_season = usersBehaviour(df_filtered, "seasontext")
+    user_by_season = usersBehavior(df_filtered, "seasontext")
     colors = ["#B7B7B7"] * len(user_by_season)
     colors[0] = '#379777'
     colors[len(colors)-1] = '#D91656'
