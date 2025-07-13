@@ -42,5 +42,3 @@ This project dedicated to analysis and visualizing a Bike Sharing Dataset, to se
 For this project i used a Bike Sharing Dataset [Bike Sharing Dataset](https://drive.google.com/file/d/1RaBmV6Q6FYWU4HWZs80Suqd7KQC34diQ/view) offered by [Dicoding](https://www.dicoding.com/).
 
 Feel free to explore the my simple dashboard [Bike Sharing Dashboard](https://ahmadghozali-bike-sharing.streamlit.app/) and explore useful information interactively there.
-
-Copyright 2024 - Ahmad Ghozali
